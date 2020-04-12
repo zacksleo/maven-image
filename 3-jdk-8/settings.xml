@@ -5,16 +5,22 @@
   <localRepository>/usr/share/maven/ref/repository</localRepository>
   <mirrors>
     <mirror>
+      <id>aliyunmaven</id>
+      <mirrorOf>*</mirrorOf>
+      <name>阿里云公共仓库</name>
+      <url>https://maven.aliyun.com/repository/public</url>
+    </mirror>
+    <mirror>
         <!--This sends everything else to /public -->
         <id>aliyun-nexus</id>
-        <mirrorOf>*</mirrorOf> 
+        <mirrorOf>*</mirrorOf>
         <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
     </mirror>
     <mirror>
-        <!--This is used to direct the public snapshots repo in the 
+        <!--This is used to direct the public snapshots repo in the
             profile below over to a different nexus group -->
         <id>aliyun-nexus-public-snapshots</id>
-        <mirrorOf>public-snapshots</mirrorOf> 
+        <mirrorOf>public-snapshots</mirrorOf>
         <url>http://maven.aliyun.com/nexus/content/repositories/snapshots/</url>
       </mirror>
     </mirrors>
